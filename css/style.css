@@ -1,1 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a{
+ color: #444;
+ text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+/* dropdown links should be white */
+.dropdown-content a {
+    color: white;
+}
+
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    top:100%;
+    left: 0;
+}
+
+.dropdown-content li{
+    width : 100%;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/* highlight the main tab when its dropdown is open */
+.dropdown:hover > a {
+    background-color: #555;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+/* container to wrap page content */
+.site-content {
+    width: 90%;            /* use most of viewport */
+    max-width: 1200px;     /* prevent extreme stretch on very large screens */
+    margin: 0 auto;        /* center it */
+    padding: 0 15px;
+}
+
+/* if screen is smaller, let it shrink a bit more */
+@media (max-width: 600px) {
+    .site-content {
+        width: 95%;
+    }
+}
