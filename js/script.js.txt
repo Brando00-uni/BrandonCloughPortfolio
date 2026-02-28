@@ -1,0 +1,11 @@
+function toggleMenu() {
+document.querySelector(".menu").classList.toggle("active");
+}
+
+function toggleDropdown(event) {
+
+    if (window.innerWidth > 768) {event .preventDefault();
+        const dropdown = event.target.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    } 
+}

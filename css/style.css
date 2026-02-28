@@ -140,6 +140,22 @@ main {
     }
 }
 
+@keyframes slideIn{
+    
+    from {transform: translateX(-100%); }
+    to {transform: translateX(0); }
+}
+
+.fade-in {
+    padding: 40px;
+    animation: fadePage 1s ease;
+}
+
+@keyframes fadePage {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* container to wrap page content */
 .site-content {
     width: 90%;            /* use most of viewport */
