@@ -4,6 +4,20 @@ body {
     padding: 0;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
 header {
      color: white;
     background-color: #333;
@@ -79,6 +93,53 @@ main {
     padding: 20px;
 }
 
+@keyframes dropdownFade {
+    from { opacity: 0; transform: 
+    translateY(-10px); }
+    to { opacity: 1; transform: translatey(0); }
+}
+
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+/* mobile styles */
+
+@media (max-width: 600px) {
+  .menu{
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+   animation: slideDown 0.3s ease forwards;     
+  }
+
+    .hamburger {
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none; /* disable hover on mobile */
+    }
+
+    .dropdown .dropdown-content {
+        position: static; /* make dropdown content part of normal flow */
+        background-color: #555;
+    }
+}
+
 /* container to wrap page content */
 .site-content {
     width: 90%;            /* use most of viewport */
@@ -112,5 +173,18 @@ main {
 .image {
     display: block;
     max-width: 100%;
+    height: 240px ;
+}
+
+/* layout helper for an image next to some text */
+.img-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;            /* space between image and text */
+}
+
+/* make image inside the helper scale appropriately */
+.img-text img {
+    max-width: 40%;       /* adjust as needed */
     height: auto;
 }
