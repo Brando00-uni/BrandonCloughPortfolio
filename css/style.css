@@ -130,13 +130,19 @@ main {
         display: block;
     }
 
+    /* disable hover-triggered dropdown on mobile; we use click instead */
     .dropdown:hover .dropdown-content {
-        display: none; /* disable hover on mobile */
+        display: none;
     }
 
     .dropdown .dropdown-content {
         position: static; /* make dropdown content part of normal flow */
         background-color: #555;
+    }
+
+    /* mobile open state handled via JS class */
+    .dropdown .dropdown-content.open {
+        display: block;
     }
 }
 
