@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>About Me</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body class = "site">
-         <div class="site-content">
-       <header>
-         <nav>
-      <ul class ="menu">
-        <li><a href="index.html">Home</a></li>
-        <li class = "dropdown">
-          <a href="#">Navigation</a>
-          <ul class="dropdown-content">
-            <li><a href="about.html">About Me</a></li>
-        </ul>
-        </li>
-    </nav>
-       </header>
-       <main>
-        <div class="wrapper img-text">
-            <div>
-                <h2>About Me</h2>
-                <p>My name is Brandon Clough and I am a Undergraduate Student of University centre of Leeds.</p>
-                <p>I am currently studying Game Development and I am in my second year of University.</p>
-            </div>
-            <img src="Images/Monkey.jpg" class="img-responsive">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="site-content fade-in">
+      <header class="navbar">
+        <div class="logo">
+          <a href="index.html">Brandon Clough</a>
         </div>
+        <div class="hamburger" onclick = "toggleMenu()"></div>
+      <nav id = "nav-menu">
+        <ul class ="menu">
+          <li class = "dropdown">
+            <a href="#" onclick = "toggleDropdown(event)"> 
+              Navigation
+            </a>
+            <ul class="dropdown-content">
+              <li><a href="index.html">Home</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+  </header>
+      <main>
+
       </main>
+    </div>
+  </body>
 </html>
