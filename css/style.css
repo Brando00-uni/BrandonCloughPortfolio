@@ -1,9 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    margin: auto;
     padding: 0;
 }
-
+footer {
+    color: inherit;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -19,21 +24,39 @@ body {
 }
 
 header {
-     color: white;
+    color: white;
     background-color: #333;
     padding: 10px;
     text-align: center;
 }
 
 h1 {
-    margin: 0;
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+h2 {
+    text-align: center;
+    margin: auto;
+}
+
+p{
+    border-style: solid;
+    border-color: #111;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .menu {
     list-style-type: none;
-    margin: 10px 0 0 0;
-    padding: 0;
-    display: flex;
+    margin:10px 0 0 0;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: aqua;
+    border: #111 solid 1px;
+    border-radius: 5px;
 }
 
 .menu li {
@@ -70,7 +93,7 @@ header .menu a:hover {
     display: none;
     position: absolute;
     background-color: #444;
-    min-width: 160px;
+    min-width: auto;
     top:100%;
     left: 0;
 }
@@ -89,8 +112,10 @@ header .menu a:hover {
     color: white;
 }
 
+
 main {
     padding: 20px;
+    alignment-baseline: central;
 }
 
 @keyframes dropdownFade {
@@ -117,7 +142,7 @@ main {
     position: absolute;
     top: 60px;
     right: 0;
-    width: 200px;
+    width: auto;
     display: none;
   }
 
@@ -164,38 +189,42 @@ main {
 
 /* container to wrap page content */
 .site-content {
-    width: 90%;            /* use most of viewport */
-    max-width: 1200px;     /* prevent extreme stretch on very large screens */
-    margin: 0 auto;        /* center it */
-    padding: 0 15px;
+/* use most of viewport */
+    
+    max-height: auto;     /* limit height on large screens */
+
+    padding: 300px 0 200px 0;
+
+    background: linear-gradient(to right, #e61a1a, #bbb7b7);
+    background-size: 200% 200%;
+    animation: gradientMove 6s ease-in-out infinite;
 }
 
 /* generic wrapper utility class that can be reused elsewhere */
 .wrapper {
-    width: 90%;
-    max-width: 1200px;
+    max-width: auto;     /* prevent extreme stretch on very large screens */
     margin: 0 auto;
     padding: 0 15px;
+    text-align: center;
 }
 /* if screen is smaller, let it shrink a bit more */
 @media (max-width: 600px) {
     .site-content {
-        width: 95%;
+        width: 50;
     }
 }
 
 /* reusable image utility */
 .img-responsive {
-    display: block;
-    max-width: 100%;
+    display: flex;
     height: auto;
+    max-width: 100%;
 }
 
 /* alternative generic name if needed */
 .image {
     display: block;
-    max-width: 100%;
-    height: 240px ;
+    height: auto ;
 }
 
 /* layout helper for an image next to some text */
@@ -209,4 +238,30 @@ main {
 .img-text img {
     max-width: 40%;       /* adjust as needed */
     height: auto;
+}
+
+.button {
+  border: none;
+  color: rgb(0, 0, 0);
+    background-color: inherit;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border:4px solid #111;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
