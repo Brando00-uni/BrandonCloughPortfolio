@@ -8,3 +8,27 @@ function toggleDropdown(event) {
     const dropdown = event.target.nextElementSibling;
     dropdown.classList.toggle('open');
 }
+
+// Handle fade-out animation on button navigation
+function handleButtonClick(event) {
+    const link = event.currentTarget.querySelector('a');
+    if (link && link.href) {
+        event.preventDefault();
+        
+        // Add fade-out animation
+        document.body.style.animation = 'fadeOut 0.6s ease forwards';
+        
+        // Navigate after fade-out completes
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 600);
+    }
+}
+
+// Attach click handlers to all buttons
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('button.button');
+    buttons.forEach(button => {
+        button.addEventListener('click', handleButtonClick);
+    });
+});

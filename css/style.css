@@ -5,7 +5,7 @@ body {
 }
 footer {
     color: inherit;
-    background-color: #333;
+    background: inherit;      /* allow gradient from parent to show through */
     padding: 10px;
     text-align: center;
 }
@@ -24,15 +24,13 @@ footer {
 }
 
 header {
-    color: white;
-    background-color: #333;
-    padding: 10px;
+    color: inherit;
+    background-color: inherit;
     text-align: center;
 }
 
 h1 {
     text-align: center;
-    margin: 40px 0 20px 0;
 }
 
 h2 {
@@ -41,10 +39,18 @@ h2 {
 }
 
 p{
-    border-style: solid;
-    border-color: #111;
-    border-radius: 5px;
+    
     text-align: center;
+}
+
+main {
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+button a {
+    color: #111;
+    text-decoration: none;
 }
 
 .menu {
@@ -187,15 +193,21 @@ main {
     to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
+}
+
 /* container to wrap page content */
 .site-content {
 /* use most of viewport */
     
     max-height: auto;     /* limit height on large screens */
 
-    padding: 300px 0 200px 0;
+    /* reduce excessive spacing at top and bottom */
+ 
 
-    background: linear-gradient(to right, #e61a1a, #bbb7b7);
+    background: linear-gradient(to right, #da4f4f, #dddcdc);
     background-size: 200% 200%;
     animation: gradientMove 6s ease-in-out infinite;
 }
@@ -206,11 +218,13 @@ main {
     margin: 0 auto;
     padding: 0 15px;
     text-align: center;
+    align-items: center;
 }
 /* if screen is smaller, let it shrink a bit more */
 @media (max-width: 600px) {
     .site-content {
-        width: 50;
+        width: auto;
+        height: auto;
     }
 }
 
@@ -219,6 +233,8 @@ main {
     display: flex;
     height: auto;
     max-width: 100%;
+    border: #111 solid 1px;
+    border-radius: 360px;
 }
 
 /* alternative generic name if needed */
@@ -227,17 +243,25 @@ main {
     height: auto ;
 }
 
-/* layout helper for an image next to some text */
+/* layout helper for an image with text centered next to it */
 .img-text {
     display: flex;
     align-items: center;
-    gap: 20px;            /* space between image and text */
+    gap: 30px;
 }
 
 /* make image inside the helper scale appropriately */
 .img-text img {
-    max-width: 40%;       /* adjust as needed */
+    flex-shrink: 0;
+    max-width: 25%;       /* reduce image size */
     height: auto;
+}
+
+/* scale text inside img-text for better readability */
+.img-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: left;
 }
 
 .button {
