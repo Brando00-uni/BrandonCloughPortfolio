@@ -5,36 +5,13 @@ body {
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
-}
+
 footer {
     color: inherit;
-    background: inherit;      /* allow gradient from parent to show through */
     padding: 10px;
     text-align: center;
 }
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    flex-wrap: wrap;
-}
 
-@media (max-width: 480px) {
-    .navbar {
-        padding: 8px 10px;
-        min-height: 50px;
-    }
-}
-
-.logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-}
 
 header {
     color: inherit;
@@ -51,439 +28,44 @@ h2 {
     margin: auto;
 }
 
-p{
-    
-    text-align: center;
-}
-
-main {
-    padding: 20px 0 20px 0;
-    text-align: center;
-}
 
 button a {
     color: #111;
     text-decoration: none;
 }
 
-.menu {
-    list-style-type: none;
-    margin: 10px 0 0 0;
-    padding: 10px;
-    display: inline-flex;
-    align-items: center;
-    text-transform: uppercase;
-    background-color: aqua;
-    border: #111 solid 1px;
-    border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-    .menu {
-        margin: 0;
-        padding: 0;
-        background-color: #333;
-    }
-}
-
-.menu li {
-    position: relative;
-}
-
-.menu a{
- color: #444;
- text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-}
-
-/* ensure header links remain white on dark background */
-header .menu a {
-    color: white;
-}
-
-header .menu a:hover {
-    background-color: #555;
-}
-
-.menu a:hover {
-    background-color: #555;
-}
-
-/* dropdown links should be white */
-.dropdown-content a {
-    color: white;
-}
-
-
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: #444;
-    min-width: auto;
-    top:100%;
-    left: 0;
-}
-
-.dropdown-content li{
-    width : 100%;
-}
-
-.dropdown:hover .dropdown-content{
-    display: block;
-}
-
-/* highlight the main tab when its dropdown is open */
-.dropdown:hover > a {
-    background-color: #555;
-    color: white;
-}
-
-
 main {
     padding: 20px;
     alignment-baseline: central;
 }
 
-@keyframes dropdownFade {
-    from { opacity: 0; transform: 
-    translateY(-10px); }
-    to { opacity: 1; transform: translatey(0); }
-}
 
-.hamburger {
-    display: none;
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    position: relative;
-    cursor: pointer;
-}
 
-/* mobile styles */
-
-/* Tablets and smaller screens */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 10px 15px;
-  }
-
-  .menu {
-    flex-direction: column;
-    background: #333;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 250px;
-    display: none;
-    border-radius: 0;
-    border: none;
-  }
-
-  .menu.active {
+img {
+    max-width: 20%;
+    height: 20%;
     display: flex;
-    animation: slideDown 0.3s ease forwards;     
-  }
-
-  .menu li {
-    width: 100%;
-  }
-
-  .menu a {
-    padding: 12px 15px;
-    width: 100%;
-    text-align: left;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  /* disable hover-triggered dropdown on mobile; we use click instead */
-  .dropdown:hover .dropdown-content {
-    display: none;
-  }
-
-  .dropdown .dropdown-content {
-    position: static; /* make dropdown content part of normal flow */
-    background-color: #555;
-    display: none;
-  }
-
-  /* mobile open state handled via JS class */
-  .dropdown .dropdown-content.open {
-    display: block;
-  }
-
-  .dropdown-content li {
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 1.8em;
-    margin: 15px 0;
-  }
-
-  h2 {
-    font-size: 1.3em;
-    margin: 10px 0;
-  }
-
-  p {
-    font-size: 1em;
-  }
-
-  .site-content {
-    width: 100%;
-    height: auto;
-    background: linear-gradient(to right, #da4f4f, #dddcdc);
-  }
-
-  .img-text {
-    flex-direction: row;
-    gap: 15px;
-  }
-
-  .img-text img {
-    max-width: 35%;
-    flex-shrink: 0;
-  }
-
-  .img-text p {
-    font-size: clamp(0.875rem, 2.5vw, 1.2rem);
-  }
-
-  .button {
-    padding: 12px 24px;
-    font-size: 14px;
-    margin: 6px 2px;
-    width: 90%;
-    max-width: 300px;
-  }
-
-  main {
-    padding: 15px;
-  }
-}
-
-/* Mobile phones (smaller screens) */
-@media (max-width: 480px) {
-  .navbar {
-    padding: 8px 10px;
-  }
-
-  .logo a {
-    font-size: 1.2em;
-  }
-
-  .menu {
-    width: 200px;
-    top: 50px;
-  }
-
-  h1 {
-    font-size: 1.5em;
-    margin: 10px 0;
-  }
-
-  h2 {
-    font-size: 1.1em;
-    margin: 8px 0;
-  }
-
-  p {
-    font-size: 0.9em;
-    line-height: 1.4;
-  }
-
-  .site-content {
-    width: 100%;
-    height: auto;
-  }
-
-  .img-text {
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .img-text img {
-    max-width: 30%;
-  }
-
-  .img-text p {
-    font-size: clamp(0.8rem, 2.5vw, 1rem);
-    line-height: 1.4;
-  }
-
-  .button {
-    padding: 10px 15px;
-    font-size: 13px;
-    margin: 4px 2px;
-    width: 85%;
-    max-width: 280px;
-    border: 2px solid #111;
-  }
-
-  main {
-    padding: 10px;
-  }
-
-  header {
-    padding: 10px 0;
-  }
-
-  footer {
-    padding: 8px;
-    font-size: 0.85em;
-  }
-
-  .hamburger {
-    width: 25px;
-    height: 2px;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn{
-    
-    from {transform: translateX(-100%); }
-    to {transform: translateX(0); }
-}
-
-.fade-in {
-    padding: 40px;
-    animation: fadePage 1s ease;
-}
-
-@keyframes fadePage {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; transform: translateY(0); }
-    to { opacity: 0; transform: translateY(20px); }
-}
-
-/* container to wrap page content */
-.site-content {
-    background: linear-gradient(to right, #da4f4f, #dddcdc);
-    background-size: 200% 200%;
-    animation: gradientMove 6s ease-in-out infinite;
-    min-height: 100vh;
-}
-
-@media (max-width: 768px) {
-    .site-content {
-        background: linear-gradient(135deg, #da4f4f, #dddcdc);
-    }
-}
-
-/* generic wrapper utility class that can be reused elsewhere */
-.wrapper {
-    max-width: 1200px;     /* prevent extreme stretch on very large screens */
-    margin: 0 auto;
-    padding: 0 15px;
-    text-align: center;
-    align-items: center;
-}
-
-/* Tablet and smaller screens */
-@media (max-width: 768px) {
-    .wrapper {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-}
-
-/* Mobile phones */
-@media (max-width: 480px) {
-    .wrapper {
-        max-width: 100%;
-        padding: 0 8px;
-    }
-
-    footer {
-        padding: 6px;
-        font-size: 0.8em;
-        background-color: inherit;
-    }
-
-    h1 {
-        font-size: 1.2em;
-        margin: 10px 0;
-    }
-
-    h2 {
-        font-size: 0.15em;
-        margin: 8px 0;
-    }
-
-    p{
-        font-size: 0.7em;
-        line-height: 1.2;
-    }
-
-    .img-responsive
-    {
-        max-width: 100%;
-    }
-
-    .img-text {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .img-text img {
-        max-width: 80%;
-    }
-}
-
-/* reusable image utility */
-.img-responsive {
-    display: flex;
-    height: auto;
-    max-width: 100%;
-    border: #111 solid 2px;
     border-radius: 360px;
 }
 
-/* alternative generic name if needed */
-.image {
-    display: block;
-    height: auto ;
-}
 
-/* layout helper for an image with text centered next to it */
-.img-text {
-    display: flex;
+/* generic wrapper utility class that can be reused elsewhere */
+.wrapper {
+    margin: 0 auto;
+    
+    display: inline-flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
+    padding: 20px;
 }
 
-/* scale text inside img-text for better readability */
-.img-text img {
-    flex-shrink: 0;
-    max-width: 25%;       /* reduce image size */
-    height: auto;
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-/* scale text inside img-text for better readability */
-.img-text p {
-    font-size: clamp(0.875rem, 2.5vw, 1.5rem);
-    line-height: 1.6;
-    text-align: left;
-}
 
 .button {
   border: 4px solid #111;
@@ -513,6 +95,49 @@ main {
 .button:active {
   transform: scale(0.98);
 }
+
+
+@keyframes dropdownFade {
+    from { opacity: 0; transform: 
+    translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn{
+    
+    from {transform: translateX(-100%); }
+    to {transform: translateX(0); }
+}
+
+.fade-in {
+    padding: 20px;
+    animation: fadePage 1s ease;
+    background: linear-gradient(to right, #f04040, #dddcdc);
+    background-size: 200% 200%;
+    animation: gradientMove 5s ease-in-out infinite;
+}
+
+@keyframes fadePage {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
+}
+
 
 @keyframes gradientMove {
     0% {
