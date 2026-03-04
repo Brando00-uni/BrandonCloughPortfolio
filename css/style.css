@@ -407,7 +407,7 @@ main {
 }
 
 /* Mobile phones */
-@media (max-width: 240px) {
+@media (max-width: 480px) {
     .wrapper {
         max-width: 100%;
         padding: 0 8px;
@@ -417,6 +417,35 @@ main {
         padding: 6px;
         font-size: 0.8em;
         background-color: inherit;
+    }
+
+    h1 {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 0.15em;
+        margin: 8px 0;
+    }
+
+    p{
+        font-size: 0.7em;
+        line-height: 1.2;
+    }
+
+    .img-responsive
+    {
+        max-width: 100%;
+    }
+
+    .img-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .img-text img {
+        max-width: 80%;
     }
 }
 
