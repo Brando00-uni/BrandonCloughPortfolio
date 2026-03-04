@@ -1,7 +1,12 @@
 body {
     font-family: 'Segoe UI', sans-serif;
-    margin: auto;
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 footer {
     color: inherit;
@@ -15,6 +20,14 @@ footer {
     align-items: center;
     background-color: #333;
     padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 10px;
+        min-height: 50px;
+    }
 }
 
 .logo a {
@@ -55,7 +68,7 @@ button a {
 
 .menu {
     list-style-type: none;
-    margin:10px 0 0 0;
+    margin: 10px 0 0 0;
     padding: 10px;
     display: inline-flex;
     align-items: center;
@@ -63,6 +76,14 @@ button a {
     background-color: aqua;
     border: #111 solid 1px;
     border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+    }
 }
 
 .menu li {
@@ -141,40 +162,196 @@ main {
 
 /* mobile styles */
 
-@media (max-width: 600px) {
-  .menu{
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .menu {
     flex-direction: column;
-    background: #111;
+    background: #333;
     position: absolute;
     top: 60px;
     right: 0;
-    width: auto;
+    width: 250px;
     display: none;
+    border-radius: 0;
+    border: none;
   }
 
   .menu.active {
     display: flex;
-   animation: slideDown 0.3s ease forwards;     
+    animation: slideDown 0.3s ease forwards;     
   }
 
-    .hamburger {
-        display: block;
-    }
+  .menu li {
+    width: 100%;
+  }
 
-    /* disable hover-triggered dropdown on mobile; we use click instead */
-    .dropdown:hover .dropdown-content {
-        display: none;
-    }
+  .menu a {
+    padding: 12px 15px;
+    width: 100%;
+    text-align: left;
+  }
 
-    .dropdown .dropdown-content {
-        position: static; /* make dropdown content part of normal flow */
-        background-color: #555;
-    }
+  .hamburger {
+    display: block;
+  }
 
-    /* mobile open state handled via JS class */
-    .dropdown .dropdown-content.open {
-        display: block;
-    }
+  /* disable hover-triggered dropdown on mobile; we use click instead */
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown .dropdown-content {
+    position: static; /* make dropdown content part of normal flow */
+    background-color: #555;
+    display: none;
+  }
+
+  /* mobile open state handled via JS class */
+  .dropdown .dropdown-content.open {
+    display: block;
+  }
+
+  .dropdown-content li {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    margin: 15px 0;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .site-content {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right, #da4f4f, #dddcdc);
+  }
+
+  .img-text {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .img-text img {
+    max-width: 35%;
+    flex-shrink: 0;
+  }
+
+  .img-text p {
+    font-size: clamp(0.875rem, 2.5vw, 1.2rem);
+  }
+
+  .button {
+    padding: 12px 24px;
+    font-size: 14px;
+    margin: 6px 2px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  main {
+    padding: 15px;
+  }
+}
+
+/* Mobile phones (smaller screens) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 10px;
+  }
+
+  .logo a {
+    font-size: 1.2em;
+  }
+
+  .menu {
+    width: 200px;
+    top: 50px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 1.1em;
+    margin: 8px 0;
+  }
+
+  p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  .site-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .img-text {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .img-text img {
+    max-width: 30%;
+  }
+
+  .img-text p {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    line-height: 1.4;
+  }
+
+  .button {
+    padding: 10px 15px;
+    font-size: 13px;
+    margin: 4px 2px;
+    width: 85%;
+    max-width: 280px;
+    border: 2px solid #111;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  header {
+    padding: 10px 0;
+  }
+
+  footer {
+    padding: 8px;
+    font-size: 0.85em;
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 2px;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideIn{
@@ -200,31 +377,46 @@ main {
 
 /* container to wrap page content */
 .site-content {
-/* use most of viewport */
-    
-    max-height: auto;     /* limit height on large screens */
-
-    /* reduce excessive spacing at top and bottom */
- 
-
     background: linear-gradient(to right, #da4f4f, #dddcdc);
     background-size: 200% 200%;
     animation: gradientMove 6s ease-in-out infinite;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .site-content {
+        background: linear-gradient(135deg, #da4f4f, #dddcdc);
+    }
 }
 
 /* generic wrapper utility class that can be reused elsewhere */
 .wrapper {
-    max-width: auto;     /* prevent extreme stretch on very large screens */
+    max-width: 1200px;     /* prevent extreme stretch on very large screens */
     margin: 0 auto;
     padding: 0 15px;
     text-align: center;
     align-items: center;
 }
-/* if screen is smaller, let it shrink a bit more */
-@media (max-width: 600px) {
-    .site-content {
-        width: auto;
-        height: auto;
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 240px) {
+    .wrapper {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+
+    footer {
+        padding: 6px;
+        font-size: 0.8em;
+        background-color: inherit;
     }
 }
 
@@ -233,7 +425,7 @@ main {
     display: flex;
     height: auto;
     max-width: 100%;
-    border: #111 solid 1px;
+    border: #111 solid 2px;
     border-radius: 360px;
 }
 
@@ -250,7 +442,7 @@ main {
     gap: 30px;
 }
 
-/* make image inside the helper scale appropriately */
+/* scale text inside img-text for better readability */
 .img-text img {
     flex-shrink: 0;
     max-width: 25%;       /* reduce image size */
@@ -259,15 +451,15 @@ main {
 
 /* scale text inside img-text for better readability */
 .img-text p {
-    font-size: 1.2em;
+    font-size: clamp(0.875rem, 2.5vw, 1.5rem);
     line-height: 1.6;
     text-align: left;
 }
 
 .button {
-  border: none;
+  border: 4px solid #111;
   color: rgb(0, 0, 0);
-    background-color: inherit;
+  background-color: inherit;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -275,7 +467,22 @@ main {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border:4px solid #111;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  min-height: 44px;  /* touch-friendly size */
+  min-width: 44px;   /* touch-friendly size */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+}
+
+.button:active {
+  transform: scale(0.98);
 }
 
 @keyframes gradientMove {
