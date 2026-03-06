@@ -165,4 +165,8 @@ p {
         flex-direction: row;
     }
 
+    .button{
+        border: #111 solid 2px;
+    }
+
 }
