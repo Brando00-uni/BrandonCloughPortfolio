@@ -156,3 +156,13 @@ p {
         background-position: 0% 50%;
     }
 }
+
+/* tablets and up scalling */
+@media (min-width: 768px){
+
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+
+}
