@@ -48,6 +48,10 @@ img {
     border-radius: 360px;
 }
 
+p {
+    text-align: center;
+}
+
 
 /* generic wrapper utility class that can be reused elsewhere */
 .wrapper {
@@ -57,6 +61,8 @@ img {
     align-items: center;
     gap: 20px;
     padding: 20px;
+
+    border: #111 solid 1px;
 }
 
 .button-container {
