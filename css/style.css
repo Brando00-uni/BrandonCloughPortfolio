@@ -3,8 +3,9 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: var(--scroll-y);
     box-sizing: border-box;
+    justify-content: center;
 }
 
 #app {
@@ -31,22 +32,23 @@ body, html {
 
 #about {
     display: flex;
-    flex-direction: column;
+    flex-direction: wrap;
     gap: 24px;
 }
 
 
 #portfolio {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 24px;
+    justify-content: center;
 }
 
 
 
 .contentwrapper {
 margin: 0 auto;
-position: absolute;s
+position: absolute;
 }
 
 .contentwrapper .header{
@@ -128,6 +130,7 @@ small {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    justify-content: center;
 }
 
 .aboutinformation{
@@ -197,6 +200,31 @@ text-align: left;
     top: -50px;
     font-size: .875rem;
 }
+
+.education{
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 60px;
+    gap: 40px;
+     border: 4px solid #00000077;
+}
+
+.education .header{
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 16px 0;
+}
+
+.education .li{
+    display: block;
+    padding: 16px 24px;
+    font-size: 1rem;
+    justify-content: center;
+}
+
+
 h1 {
     display: block;
     font-size: 2em;
@@ -256,7 +284,7 @@ footer{
     text-align: center;
     padding: 20px 0;
     font-size: 0.875rem;
-    color: #555;
+    color: #000000;
 }
 
 
@@ -287,7 +315,6 @@ footer{
 .fade-in {
     padding: 20px;
     animation: fadePage 1s ease;
-    background: linear-gradient(to right, #f04040, #dddcdc);
     background-size: 200% 200%;
     animation: gradientMove 5s ease-in-out infinite;
     animation: fadePage 1s ease, gradientMove 5s ease-in-out infinite;
@@ -339,7 +366,7 @@ footer{
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 0.95em;
-  color: #bdbdbd;
+  color: #000000;
   background: #1818181a;
 }
 
@@ -348,13 +375,13 @@ footer{
 }
 
 .project-details h3 {
-  color: #ffffff;
+  color: #000000;
   margin: 0 0 4px 0;
 }
 
 .project-details .subtitle {
   font-size: 1em;
-  color: #bdbdbd;
+  color: #2e2d2d;
   margin-bottom: 8px;
 }
 
@@ -362,6 +389,7 @@ footer{
 .project-details p {
   margin: 0;
   line-height: 1.5;
+  color: #000000;
 }
 
 element.style {
@@ -517,6 +545,10 @@ element.style {
 @media (max-width: 768px) {
     .fade-in {
         padding: 12px;
+        animation: fadePage 1s ease;
+        background-size: 200% 200%;
+        animation: gradientMove 5s ease-in-out infinite;
+        background-color: #f0f0f0;
     }
 
     #app {
