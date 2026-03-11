@@ -6,6 +6,9 @@ body, html {
     overflow-x: var(--scroll-y);
     box-sizing: border-box;
     justify-content: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #111;
 }
 
 #app {
@@ -40,7 +43,7 @@ body, html {
 
 
 #portfolio {
-    display: flex;
+    display: block;
     flex-direction: row;
     gap: 24px;
 }
@@ -103,6 +106,7 @@ position: absolute;
     height: 24px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
     pointer-events: none;
+    margin-bottom: 50px;
 }
 
 
@@ -146,11 +150,20 @@ small {
     padding-bottom: 60px;
 }
 
+.content .header {
+
+     display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 16px 0;
+    margin-bottom: 50px;
+}
+
 .aboutinformation{
-    display: block;
-    flex-direction: row;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin-top: 60px;
     margin-bottom: 60px;
     gap: 40px;
 }
@@ -164,12 +177,14 @@ small {
     border-radius: 50%;
     filter: grayscale(60%);
     margin: 0;
+    gap: 24px;
 }
 
 .aboutinformation .about-text{
 margin: 0;
 font-size: 1.5rem;
 text-align: left;
+
 }
 
 /* Cards grid — used both inside .aboutinformation and standalone */
@@ -242,12 +257,13 @@ text-align: left;
     padding: 16px 24px;
     font-size: 1rem;
     justify-content: center;
+    text-align: center;
 }
 
 
 h1 {
     display: block;
-    font-size: 2em;
+    font-size: clamp(2rem, 2.8vw, 2.8rem);
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
@@ -258,6 +274,8 @@ h1 {
 
 p {
     display: block;
+    font-size: clamp(1rem, 0.6vw + 0.95rem, 1.15rem);
+    line-height: 1.7;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -267,7 +285,7 @@ p {
 
 h2{
     display: block;
-    font-size: 1.5em;
+    font-size: clamp(1.5rem, 1.2vw + 1rem, 2rem);
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
     margin-inline-start: 0px;
@@ -305,6 +323,12 @@ footer{
     padding: 20px 0;
     font-size: 0.875rem;
     color: #000000;
+}
+
+h3 {
+    font-size: clamp(1.15rem, 0.6vw + 1rem, 1.45rem);
+    line-height: 1.4;
+    margin: 0 0 8px;
 }
 
 
@@ -469,6 +493,41 @@ footer{
     width: 100%;
 }
 
+
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.skills .li {
+    display: block;
+    padding: 16px 24px;
+    font-size: 1.1rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.education li,
+.skills li {
+    list-style: none;
+    max-width: 900px;
+    margin: 0 auto 24px;
+    padding: 0 12px;
+    text-align: center;
+}
+
+.education .subtitle,
+.skills .subtitle {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
 @media (max-width: 900px) {
     .experience {
         flex-direction: column;
@@ -487,7 +546,7 @@ footer{
     }
     
     .header a {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 1rem;
     }
     
     .aboutinformation .profile-pic {
@@ -497,7 +556,7 @@ footer{
     }
     
     .aboutinformation .about-text {
-        font-size: 1.2rem; /* Smaller text on mobile */
+        font-size: 1.1rem;
     }
     
     .project-card {
@@ -505,7 +564,8 @@ footer{
     }
 
     p{
-        font-size: 0.9rem; /* Smaller paragraph text on mobile */
+        font-size: 1rem;
+        line-height: 1.7;
     }
 
     
@@ -636,9 +696,17 @@ footer{
     }
 
     .information-text {
-        font-size: 1rem;
+        font-size: 1.05rem;
         line-height: 1.5;
         padding: 12px 14px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
     }
 }
 
@@ -654,6 +722,6 @@ footer{
     }
 
     h1 {
-        font-size: 1.6em;
+        font-size: 1.8rem;
     }
 }
