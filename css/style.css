@@ -9,10 +9,12 @@ body, html {
 }
 
 #app {
-    display: inline-flex;
-    flex-wrap: wrap;
+
+    display: flex;
     min-height: auto;
     overflow-y: auto;
+    flex-direction: column;
+
 }
 
 #app::-webkit-scrollbar {
@@ -32,16 +34,15 @@ body, html {
 
 #about {
     display: flex;
-    flex-direction: wrap;
+    flex-direction: row;
     gap: 24px;
 }
 
 
 #portfolio {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 24px;
-    justify-content: center;
 }
 
 
@@ -79,6 +80,18 @@ position: absolute;
     gap: 30px;
 
     flex-wrap: wrap;
+}
+
+.contentwrapper .header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -1;
+     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
 }
 
 .contentwrapper .header::after{
@@ -127,10 +140,10 @@ small {
     position: relative;
     z-index: 1;
     transition: opactiy .5s ease-out;
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     gap: 24px;
     justify-content: center;
+    padding-bottom: 60px;
 }
 
 .aboutinformation{
@@ -159,11 +172,18 @@ font-size: 1.5rem;
 text-align: left;
 }
 
+/* Cards grid — used both inside .aboutinformation and standalone */
+.experenice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .aboutinformation .experenice{
     align-items: center;
     position: relative;
-    display: inline-flex;
-    flex-wrap: wrap;
     margin: 0 0 32px;
 }
 
@@ -206,8 +226,8 @@ text-align: left;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 60px;
+    margin-top: 50px;
     gap: 40px;
-     border: 4px solid #00000077;
 }
 
 .education .header{
@@ -346,12 +366,16 @@ footer{
 .project-card {
   background: rgba(0, 0, 0, 0.212);
   border-radius: 12px;
-  margin: 24px 0;
   overflow: hidden;
-  max-width: 400px;
+  flex: 1 1 220px;
+  max-width: 300px;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
   color: #fff;
+  border: none;
+  text-align: left;
+  cursor: pointer;
 }
 
 .project-image img,
@@ -361,11 +385,11 @@ footer{
 }
 
 .project-info-bar {
-  display: block;
-  gap: 16px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 0.95em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 16px;
+  font-size: 0.85em;
   color: #000000;
   background: #1818181a;
 }
@@ -392,10 +416,7 @@ footer{
   color: #000000;
 }
 
-element.style {
-    --scroll-y: -747px;
-    
-}
+
 
 .badge {
     display: inline-block;
@@ -446,15 +467,6 @@ element.style {
     justify-content: center;
     align-items: stretch;
     width: 100%;
-}
-
-.project-card {
-    flex: 1 1 350px;
-    max-width: 350px;
-    min-width: 280px;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 @media (max-width: 900px) {
@@ -517,9 +529,9 @@ element.style {
 
 .content .project-grid .project-card,
 .content .experenice .project-card {
-    flex: 0 0 320px;
+    flex: 1 1 250px;
     max-width: 320px;
-    min-width: 280px;
+    min-width: 220px;
 }
 
 .content .project-video video {
