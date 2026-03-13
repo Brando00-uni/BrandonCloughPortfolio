@@ -91,7 +91,6 @@ position: absolute;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
     z-index: -1;
      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
 }
@@ -103,7 +102,7 @@ position: absolute;
     left: 0;
     width: 100%;
     height: 24px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+    
     pointer-events: none;
     margin-bottom: 50px;
 }
@@ -151,7 +150,7 @@ small {
 
 .content .header {
 
-     display: block;
+    display: block;
     text-align: center;
     font-size: 1.5rem;
     padding: 16px 0;
@@ -190,7 +189,7 @@ text-align: left;
 .experenice {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 50px;
     justify-content: center;
     align-items: flex-start;
 }
@@ -218,7 +217,7 @@ text-align: left;
 }
 
 .aboutinformation .experenice .project-card .video{
-    aspect-ratio: 16 / 9;
+    aspect-ratio: auto;
 
 }
 
@@ -230,7 +229,7 @@ text-align: left;
     margin-right: -32px;
     margin-bottom: -52px;
     left: -8px;
-    background-color: grey;
+    background-color: rgb(173, 171, 171);
     top: -50px;
     font-size: .875rem;
 }
@@ -637,7 +636,7 @@ h3 {
     }
 
     .contentwrapper .header {
-        display: flex;
+        display: block;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
@@ -707,6 +706,10 @@ h3 {
     h3 {
         font-size: 1.2rem;
     }
+
+    header{
+        text-align: center;
+    }
 }
 
 /* Narrow iPhone widths */
@@ -722,5 +725,9 @@ h3 {
 
     h1 {
         font-size: 1.8rem;
+    }
+
+    .aboutinformation .about-text{
+        font-size: smaller;
     }
 }
