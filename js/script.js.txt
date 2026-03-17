@@ -25,10 +25,73 @@ function handleButtonClick(event) {
     }
 }
 
+// Image Slider Functionality
+let currentSlide = 0;
+
+function initializeSlider() {
+    const sliderWrapper = document.getElementById('sliderWrapper');
+    const sliderDots = document.getElementById('sliderDots');
+    
+    if (!sliderWrapper) return;
+    
+    const slides = sliderWrapper.querySelectorAll('.slider-image');
+    const slideCount = slides.length;
+    
+    // Create dots for each slide
+    for (let i = 0; i < slideCount; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+        dot.onclick = () => goToSlide(i);
+        sliderDots.appendChild(dot);
+    }
+}
+
+function moveSlider(direction) {
+    const sliderWrapper = document.getElementById('sliderWrapper');
+    if (!sliderWrapper) return;
+    
+    const slides = sliderWrapper.querySelectorAll('.slider-image');
+    const slideCount = slides.length;
+    
+    currentSlide += direction;
+    
+    // Loop around if at the end or beginning
+    if (currentSlide >= slideCount) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = slideCount - 1;
+    }
+    
+    updateSlider();
+}
+
+function goToSlide(slideIndex) {
+    currentSlide = slideIndex;
+    updateSlider();
+}
+
+function updateSlider() {
+    const sliderWrapper = document.getElementById('sliderWrapper');
+    const slides = sliderWrapper.querySelectorAll('.slider-image');
+    const dots = document.querySelectorAll('.slider-dot');
+    
+    // Translate the slider
+    const offset = -currentSlide * 100;
+    sliderWrapper.style.transform = `translateX(${offset}%)`;
+    
+    // Update active dot
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+}
+
 // Attach click handlers to all buttons
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('button.button');
     buttons.forEach(button => {
         button.addEventListener('click', handleButtonClick);
     });
+    
+    // Initialize the image slider
+    initializeSlider();
 });
