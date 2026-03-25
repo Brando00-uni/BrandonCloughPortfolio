@@ -15,16 +15,12 @@
     --color-heading: #e2e8f0;   /* headings                  */
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 /* Fix scrolling so content moves under header */
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: var(--scroll-y);
     box-sizing: border-box;
     justify-content: center;
     font-family: 'Titillium Web', sans-serif;
@@ -103,7 +99,7 @@ body, html {
     font-size: .875rem;
 }
 
-#portfolio > .header::before {
+#portfolio .header ::before {
     content: "";
     position: absolute;
     top: 0;
@@ -114,7 +110,7 @@ body, html {
     z-index: -1;
 }
 
-#portfolio > .header::after {
+#portfolio .header ::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -145,7 +141,19 @@ body, html {
     margin-bottom: 16px;
 }
 
-#technicalskills .subtitle::after {
+#technicalskills .header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-surface);
+    z-index: -1;
+    margin-top: -16px;
+}
+
+#technicalskills .header::after {
     content: "";
     display: block;
     width: 60px;
@@ -175,12 +183,10 @@ body, html {
 margin: 0 auto;
 position: absolute;
 top: 0;
-left: 0;
-right: 0;
-width: 100%;
+left: 0;    
 }
 
-.contentwrapper > .header{
+.contentwrapper .header{
     position:sticky;
     top:0;
     z-index: 20;
@@ -191,8 +197,6 @@ width: 100%;
 
     display: flex   ;
     justify-content: space-between;
-    width: 100%;
-    padding: 0 16px;
 
 }
 
@@ -229,7 +233,7 @@ width: 100%;
     left: 0;
     width: 100%;
     height: 40px;
-    background: linear-gradient(to bottom, var(--color-surface), rgba(30, 30, 46, 0));
+
     pointer-events: none;
 }
 
@@ -276,11 +280,29 @@ small {
 
 .content .header {
 
-     display: block;
+    display: block;
     text-align: center;
     font-size: 1.5rem;
     padding: 16px 0;
     margin-bottom: 50px;
+}
+
+.content .header,
+.education .header,
+#technicalskills .header {
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.content .header,.experenice .header,
+#portfolio .header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.contentwrapper > .header {
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .aboutinformation{
@@ -762,8 +784,6 @@ h3 {
         max-width: 100%;
         margin: 0;
         padding-top: 0;
-        left: auto;
-        right: auto;
     }
 
     .contentwrapper > .header {
@@ -772,7 +792,15 @@ h3 {
         align-items: flex-start;
         gap: 8px;
         width: 100%;
-        padding: 0 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .content .header,
+    .education .header,
+    #technicalskills .header {
+        margin-top: 16px;
+        margin-bottom: 24px;
     }
 
     .contentwrapper > .header .links {
@@ -831,38 +859,6 @@ h3 {
         padding: 12px 14px;
     }
 
-    .project-page {
-        padding: 0 8px 28px;
-    }
-
-    .project-summary-card {
-        padding: 16px;
-    }
-
-    .project-summary-title {
-        margin-bottom: 14px;
-        font-size: clamp(1.35rem, 1.8vw + 1rem, 1.8rem);
-    }
-
-    .project-summary-text,
-    .project-summary-item {
-        font-size: clamp(1rem, 0.9vw + 0.9rem, 1.1rem);
-        line-height: 1.4;
-    }
-
-    .project-summary-item {
-        align-items: flex-start;
-    }
-
-    .grimel-video-section {
-        width: 100%;
-        margin: 0 auto 20px;
-    }
-
-    .grimel-video-section video {
-        max-height: 320px;
-    }
-
     h2 {
         font-size: 1.6rem;
     }
@@ -885,24 +881,6 @@ h3 {
 
     h1 {
         font-size: 1.8rem;
-    }
-
-    .project-summary-grid {
-        gap: 12px;
-        margin: 20px 0 28px;
-    }
-
-    .project-summary-card {
-        padding: 14px;
-    }
-
-    .project-summary-item {
-        gap: 8px;
-    }
-
-    .project-summary-item .icon {
-        width: 18px;
-        flex-basis: 18px;
     }
 }
 
