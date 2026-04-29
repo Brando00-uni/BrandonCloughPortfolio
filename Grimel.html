@@ -1,92 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grimel</title>
+    <meta name="description" content="Grimel project page by Brandon Clough, a linear survival horror game made in Unreal Engine Blueprints.">
+    <title>Grimel | Brandon Clough</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
   </head>
-<body class="fade-in">
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-  <div id="app">
-  
-    <div class="contentwrapper">
-
-      <div class="header">
-        <h1><a href="index.html">Brandon Clough</a>
-        <small> Gameplay Programmer</small>
-        </h1>
-        <div class="links">
-          <a class="link" href="https://www.linkedin.com/in/brandon-clough-8a4b1b3aa/" target="_blank" title="LinkedIn">
-          <img class="social-icon" src="Images/linkedin.jpg" alt="LinkedIn logo">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html">
+          <span class="brand__name">Brandon Clough</span>
+          <span class="brand__role">Gameplay Programmer</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="index.html#portfolio">Projects</a>
+          <a href="docs/Brandon Clough - CV.pdf" target="_blank" rel="noopener">CV</a>
+          <a class="icon-link" href="https://www.linkedin.com/in/brandon-clough-8a4b1b3aa/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <img src="Images/linkedin.jpg" alt="" width="32" height="32">
           </a>
-          <a class="link cv" href="docs/Brandon Clough - CV.pdf" target="_blank">
-          <button>CV</button>
-          </a>
-          <a class="link" href="index.html#portfolio">
-          <button>Home</button>
-          </a>
-        </div>
+        </nav>
       </div>
+    </header>
 
-      <!-- Content for the Grimel project page -->
-      <div class="content project-page">
+    <main id="main" class="page-shell project-page">
+      <a class="back-link" href="index.html#portfolio">Back to projects</a>
 
-          <div class = "header"> 
-            <h2> Grimel </h2>
-          </div>
-            <!-- project video card-->
-             <div class="video-section grimel-video-section">
-               <div class="video-container">
-                   <video src="media/GrimelGameplay.mp4" autoplay loop muted></video>
-               </div>
-              </div>
-
-          <div class="project-summary-grid">
-            <section class="project-summary-card">
-              <h3 class="project-summary-title">About</h3>
-              <p class="project-summary-text">
-                Grimel is a 3D horror game developed in Unreal Engine. It is a narrative-driven experience where the player collects pages and uncovers the story of the Grimel, with a focus on atmosphere and immersion.
-              </p>
-            </section>
-
-            <section class="project-summary-card">
-              <h3 class="project-summary-title">Project Info</h3>
-              <ul class="project-summary-list">
-                <li class="project-summary-item"><span class="icon">👤</span> Role: Gameplay Programmer</li>
-                <li class="project-summary-item"><span class="icon">👥</span> Team Size: 1</li>
-                <li class="project-summary-item"><span class="icon">🕒</span> Time frame: 3 months</li>
-                <li class="project-summary-item"><span class="icon">🛠</span> Engine: Unreal Engine (Blueprints)</li>
-              </ul>
-            </section>
-          </div>
-      
-        <div class = "header"> 
-          <h2> Introduction </h2>
-        </div>
-        <p class="project-description">
-          Grimel was the first project I worked on within my first year of university. 
-          it was a solo project I developed in Unreal Engine using Blueprints.
-          The game is a 3D horror experience where the player collects pages and uncovers the story of the Grimel, with a focus on atmosphere and immersion.
-          the focus of this project was to learn the basics of Unreal Engine and Blueprints, as well as to create a small but polished game experience.
+      <section class="project-hero" aria-labelledby="project-title">
+        <p class="eyebrow">Solo project | Unreal Engine Blueprints</p>
+        <h1 id="project-title">Grimel</h1>
+        <p class="project-lead">
+          A 3D horror game built around atmosphere, page collection, and a narrative mystery.
         </p>
-      <div class = "header"> 
-        <h2> What I Had Learned </h2>
-      </div>
-      <p class="project-description">
-        Through the development of Grimel, I learned the basics of Unreal Engine and Blueprints, as well as how to create a small but polished game experience. 
-        I also learned how to create a narrative-driven experience and how to use lighting and sound to create atmosphere and immersion.
-        Overall, this project was a great learning experience for me and helped me to develop my skills in game development.
-      </p>
+      </section>
 
-  <footer>
-  <div>
-  <p>&copy; 2026 Brandon Clough. All rights reserved.</p>
-  </div>
-  </footer>
+      <section class="video-panel" aria-label="Grimel gameplay video">
+        <video src="media/GrimelGameplay.mp4" autoplay loop muted playsinline controls preload="metadata"></video>
+      </section>
 
-</body>
- 
+      <section class="project-summary-grid" aria-label="Project summary">
+        <article class="project-summary-card">
+          <h2>About</h2>
+          <p>
+            Grimel is a narrative-driven 3D horror game developed in Unreal Engine. The player collects pages and uncovers the story of Grimel while moving through an immersive environment.
+          </p>
+        </article>
 
+        <article class="project-summary-card">
+          <h2>Project Info</h2>
+          <dl class="project-facts">
+            <div><dt>Role</dt><dd>Gameplay Programmer</dd></div>
+            <div><dt>Team Size</dt><dd>1</dd></div>
+            <div><dt>Time Frame</dt><dd>3 months</dd></div>
+            <div><dt>Engine</dt><dd>Unreal Engine Blueprints</dd></div>
+          </dl>
+        </article>
+      </section>
+
+      <section class="text-section" aria-labelledby="intro-heading">
+        <h2 id="intro-heading">Introduction</h2>
+        <p>
+          Grimel was the first project I worked on during my first year of university. It was a solo project developed in Unreal Engine using Blueprints, with the goal of learning the basics of Unreal Engine while producing a small but polished horror experience.
+        </p>
+      </section>
+
+      <section class="text-section" aria-labelledby="learning-heading">
+        <h2 id="learning-heading">What I Learned</h2>
+        <p>
+          Through Grimel, I learned the basics of Unreal Engine and Blueprint scripting. I also explored how lighting, sound, pacing, and level layout can support atmosphere and immersion in a narrative-driven game.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Brandon Clough. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

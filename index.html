@@ -1,208 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta name="description" content="Portfolio for Brandon Clough, a gameplay programmer focused on Unreal Engine, C++, C#, and Blueprint projects.">
+    <title>Brandon Clough | Gameplay Programmer</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js.txt"></script>
+    <script src="js/script.js" defer></script>
   </head>
-  <body class="fade-in">
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-  <div id="app">
-  
-  <div class="contentwrapper">
-    
-    <div class="header">
-      <h1><a href="index.html">Brandon Clough</a>
-      <small> Gameplay Programmer</small>
-      </h1>
-       <div class="links">
-        <a class="link" href="https://www.linkedin.com/in/brandon-clough-8a4b1b3aa/" target="_blank" title="LinkedIn">
-          <img class="social-icon" src="Images/linkedin.jpg" alt="LinkedIn logo">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html" aria-label="Brandon Clough home">
+          <span class="brand__name">Brandon Clough</span>
+          <span class="brand__role">Gameplay Programmer</span>
         </a>
-        <a class="link cv" href="docs/Brandon Clough - CV.pdf" target="_blank">
-          <button>CV</button>
-        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#portfolio">Projects</a>
+          <a href="#technicalskills">Skills</a>
+          <a href="docs/Brandon Clough - CV.pdf" target="_blank" rel="noopener">CV</a>
+          <a class="icon-link" href="https://www.linkedin.com/in/brandon-clough-8a4b1b3aa/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <img src="Images/linkedin.jpg" alt="" width="32" height="32">
+          </a>
+        </nav>
       </div>
-    </div>
+    </header>
 
-
-    <div class = "content">
-
-    <div class = "aboutinformation">
-      <img class="profile-pic" src="Images/Photoofme.jpg" alt="Profile picture">
-        <section class="information">
-        <h2 id="about" class="information-section">Hi, I'm Brandon!</h2>
-          <div class = "information-background">
-            <p class="information-text">
-              I am a 25 year old undergraduate student studying Game Development at the University centre Leeds! 
-            </p>
-
-            <p class="information-text">
-              Before tackling game development, I studied fabrication and welding for 3 years and have 2 years of job experience in the field. 
-              I've always had a passion for games and wanted to learn how to make them, so I decided to go back to university and pursue a career in game development.
-              I am currently in my second year of study and have a strong interest in programming,excited to continue learning and developing my skills in the field of game development!
-            </p>
-
-            <p class="information-text">
-              Over time I have gained experience with C++ and C# programming languages, as well as game engines such as Unreal Engine. 
-              I have worked on several game projects, both independently and as part of small teams, which has allowed me to develop my skills in game design, programming, and project management.
-              I am always eager to learn new technologies and techniques in the field of game development, and committed to creating engaging games that provide players with memorable experiences.
-            </p>
-
+    <main id="main" class="page-shell">
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="hero__media">
+          <img class="profile-pic" src="Images/Photoofme.jpg" alt="Portrait of Brandon Clough">
+        </div>
+        <div class="hero__content">
+          <p class="eyebrow">Unreal Engine | C++ | C# | Blueprints</p>
+          <h1 id="intro-title">Hi, I'm Brandon.</h1>
+          <p>
+            I am an undergraduate Game Development student at University Centre Leeds with a strong interest in gameplay programming.
+          </p>
+          <p>
+            Before moving into game development, I studied fabrication and welding for three years and gained two years of professional experience in the field. That background taught me to work carefully, solve practical problems, and keep improving a system until it feels right.
+          </p>
+          <p>
+            I have experience with C++, C#, Unreal Engine, and Blueprint scripting across solo and small-team projects. I am focused on building responsive gameplay systems and memorable player experiences.
+          </p>
+          <div class="hero__actions" aria-label="Portfolio actions">
+            <a class="button button--primary" href="#portfolio">View Projects</a>
+            <a class="button" href="docs/Brandon Clough - CV.pdf" target="_blank" rel="noopener">Open CV</a>
+          </div>
         </div>
       </section>
 
-    </div>
+      <section id="portfolio" class="section" aria-labelledby="projects-title">
+        <div class="section__heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="projects-title">Projects</h2>
+        </div>
 
-
-    <div id="portfolio">
-
-      <div class = "header"> 
-        <h2> Projects </h2>
-      </div>
-
-      <div class="experenice">
-
-        <button type="button" class ="project-card" onclick="location.href='SpeedFusionRivals.html'">
-          <div class="project-video">
-            <video src="media/SpeedFusionRivalsGameplay.mp4" autoplay loop muted></video>
-            <!-- Or use <video> or <iframe> for gameplay -->
-          </div>
-
-          <div class="project-info-bar">
-            <span>👤 1</span>
-            <span>⏱ 6 Months</span>
-            <span>🛠 Unreal Engine (Blueprints)</span>
-          </div>
-
-          <div class="project-details">
-            <h3>Speed Fusion Rivals</h3>
-            <div class="subtitle">A racing game</div>
-            <p>
-              This was the first solo project I worked on to begin my journey, whilst attending "Access to higher education(Game Development)" course at leeds city college, which I made it using unreal engine blueprints.
-            </p>
-          </div>
-
-        </button>
-          
-
-        <button type="button" class ="project-card" onclick="location.href='Grimel.html'">
-
-          <div class="project-video">
-            <video src="media/GrimelGameplay.mp4" autoplay loop muted></video>
-            <!-- Or use <video> or <iframe> for gameplay -->
-          </div>
-
-          <div class="project-info-bar">
-            <span>👤 1</span>
-            <span>⏱ 3 months</span>
-            <span>🛠 Unreal Engine (Blueprints)</span>
-          </div>
-
-          <div class="project-details">
-            <h3>Grimel</h3>
-            <div class="subtitle">Linear survival horror</div>
-            <p>
-              This was the first solo project I worked on after enrolling into university, 
-              which was made with Unreal Engine blueprints and was the first project to showcase my skills in game development.
-            </p>
-          </div>
-
-        </button>
-
-        <button type="button" class ="project-card" onclick="location.href='CowboySurvival.html'">
-
-          <div class="project-video">
-
-            <video src="media/CowboySurvivalGameplay.mp4" autoplay loop muted></video>
-            <!-- Or use <video> or <iframe> for gameplay -->
-          </div>
-
-          <div class="project-info-bar">
-            <span>👤 1</span>
-            <span>⏱ 3 Months</span>
-            <span>🛠 Unreal Engine (C++)</span>
-          </div>
-
-          <div class="project-details">
-            <h3>Cowboy Survival</h3>
-            <div class="subtitle">A thrilling cowboy wave survival game</div>
-            <p>
-              After submitting Grimel, I moved on to another solo project for which became an optional assignment.
-              I worked on this project within the last few months of university and it was the first project, 
-              where I made it in Unreal Engine using entirely C++.
-          </div>
-
-        </button>
-
-        <button type="button" class ="project-card" onclick="location.href='IronStromPage.html'">
-
-          <div class="project-video">
-            <video src="media/IronStormGameplay.mp4" autoplay loop muted></video>
-            <!-- Or use <video> or <iframe> for gameplay -->
-          </div>
-
-          <div class="project-info-bar">
-            <span>👤 1</span>
-            <span>⏱ 6 months</span>
-            <span>🛠 Unreal Engine (Blueprints)</span>
-          </div>
-
-          <div class="project-details">
-            <h3>Iron Storm</h3>
-            <div class="subtitle">A linear based shooter adventure.</div>
-            <p>
-              Whilst developing my solo projects, 
-              I was assigned to a group project where I worked with three other people as the lead programmer. 
-              The team made it in Unreal Engine using blueprints.
-            </p>
-
-          </button>
-
-      </div>
-
-        <div id="technicalskills">
-          <div class = "header">
-          <h2> Technical Skills </h2>
-          </div>
-          
-          <div class="skills">
-            <div class="li">
-              <li>
-                <h3>Programming Languages</h3>
-                <p>
-                  Proficient in C++ and C#, with experience in game development using Unreal Engine.
-                </p>
-              </li>
-
-              <li>
-                <h3>Game Engines</h3>
-                <p>
-                  Experienced in using Unreal Engine for game development, including level design, scripting, and asset integration.
-                </p>
-              </li>
-
-              <li>
-                <h3>Version Control</h3>
-                <p>
-                  Familiar with version control systems such as Git, allowing for efficient collaboration and code management in team projects.
-                </p>
-              </li>
+        <div class="project-grid">
+          <a class="project-card" href="SpeedFusionRivals.html" aria-label="View Speed Fusion Rivals project">
+            <div class="project-card__media">
+              <video src="media/SpeedFusionRivalsGameplay.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Gameplay footage from Speed Fusion Rivals"></video>
             </div>
-          </div>
-      </div>
-    </div>
-    </div>
-  </div>
+            <div class="project-card__meta" aria-label="Project details">
+              <span>Solo</span>
+              <span>6 months</span>
+              <span>Unreal Engine Blueprints</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Speed Fusion Rivals</h3>
+              <p class="subtitle">Racing game</p>
+              <p>
+                My first solo project while studying Access to Higher Education in Game Development at Leeds City College, built with Unreal Engine Blueprints.
+              </p>
+            </div>
+          </a>
 
+          <a class="project-card" href="Grimel.html" aria-label="View Grimel project">
+            <div class="project-card__media">
+              <video src="media/GrimelGameplay.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Gameplay footage from Grimel"></video>
+            </div>
+            <div class="project-card__meta" aria-label="Project details">
+              <span>Solo</span>
+              <span>3 months</span>
+              <span>Unreal Engine Blueprints</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Grimel</h3>
+              <p class="subtitle">Linear survival horror</p>
+              <p>
+                A first-year university project focused on atmosphere, exploration, and learning how to build a polished Unreal Engine experience.
+              </p>
+            </div>
+          </a>
 
-  <footer>
-  <p>&copy; 2026 Brandon Clough. All rights reserved.</p>
-</div>
-  </footer>
+          <a class="project-card" href="CowboySurvival.html" aria-label="View Cowboy Survival project">
+            <div class="project-card__media">
+              <video src="media/CowboySurvivalGameplay.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Gameplay footage from Cowboy Survival"></video>
+            </div>
+            <div class="project-card__meta" aria-label="Project details">
+              <span>Solo</span>
+              <span>3 months</span>
+              <span>Unreal Engine C++</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Cowboy Survival</h3>
+              <p class="subtitle">Wave survival game</p>
+              <p>
+                A top-down survival project built entirely in C++, designed to strengthen gameplay programming, enemy behaviour, and game-state systems.
+              </p>
+            </div>
+          </a>
+
+          <a class="project-card" href="IronStromPage.html" aria-label="View Iron Storm project">
+            <div class="project-card__media">
+              <video src="media/IronStormGameplay.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Gameplay footage from Iron Storm"></video>
+            </div>
+            <div class="project-card__meta" aria-label="Project details">
+              <span>Team of 4</span>
+              <span>3 months</span>
+              <span>Unreal Engine Blueprints</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Iron Storm</h3>
+              <p class="subtitle">First-person shooter</p>
+              <p>
+                A group project where I worked as lead programmer, creating core gameplay systems for a trench-warfare shooter in Unreal Engine.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="technicalskills" class="section" aria-labelledby="skills-title">
+        <div class="section__heading">
+          <p class="eyebrow">Toolkit</p>
+          <h2 id="skills-title">Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Programming Languages</h3>
+            <p>Proficient in C++ and C#, with practical experience building gameplay features and systems.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Game Engines</h3>
+            <p>Experienced with Unreal Engine, including Blueprint scripting, level setup, gameplay logic, and asset integration.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Version Control</h3>
+            <p>Familiar with Git workflows for tracking changes, collaborating in teams, and managing project history.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Brandon Clough. All rights reserved.</p>
+    </footer>
   </body>
- 
-
 </html>

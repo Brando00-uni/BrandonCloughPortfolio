@@ -1,86 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grimel</title>
+    <meta name="description" content="Cowboy Survival project page by Brandon Clough, a top-down wave survival game made in Unreal Engine C++.">
+    <title>Cowboy Survival | Brandon Clough</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
   </head>
-<body class="fade-in">
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-  <div id="app">
-  
-    <div class="contentwrapper">
-
-      <div class="header">
-        <h1><a href="index.html">Brandon Clough</a>
-        <small> Undergraduate Student</small>
-        </h1>
-        <div class="links">
-          <a class="link" href="https://www.linkedin.com/in/brandon-clough-8a4b1b3aa/" target="_blank" title="LinkedIn">
-          <img class="social-icon" src="Images/linkedin.jpg" alt="LinkedIn logo">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html">
+          <span class="brand__name">Brandon Clough</span>
+          <span class="brand__role">Gameplay Programmer</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="index.html#portfolio">Projects</a>
+          <a href="docs/Brandon Clough - CV.pdf" target="_blank" rel="noopener">CV</a>
+          <a class="icon-link" href="https://www.linkedin.com/in/brandon-clough-8a4b1b3aa/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <img src="Images/linkedin.jpg" alt="" width="32" height="32">
           </a>
-          <a class="link cv" href="docs/Brandon Clough - CV.pdf" target="_blank">
-          <button>CV</button>
-          </a>
-          <a class="link" href="index.html#portfolio">
-          <button>Home</button>
-          </a>
-        </div>
+        </nav>
       </div>
+    </header>
 
-      <!-- Content for the Grimel project page -->
-      <div class="content project-page">
+    <main id="main" class="page-shell project-page">
+      <a class="back-link" href="index.html#portfolio">Back to projects</a>
 
-          <div class = "header"> 
-            <h2> Cowboy Survival </h2>
-          </div>
-            <!-- project video card-->
-             <div class="video-section grimel-video-section">
-               <div class="video-container">
-                   <video src="media/CowboySurvivalGameplay.mp4" autoplay loop muted></video>
-               </div>
-              </div>
-
-          <div class="project-summary-grid">
-            <section class="project-summary-card">
-              <h3 class="project-summary-title">About</h3>
-              <p class="project-summary-text">
-                this was a solo project I worked on in my first year of university as part of learning C++ programming and Unreal Engine. 
-            </section>
-
-            <section class="project-summary-card">
-              <h3 class="project-summary-title">Project Info</h3>
-              <ul class="project-summary-list">
-                <li class="project-summary-item"><span class="icon">👤</span> Role: Gameplay Programmer</li>
-                <li class="project-summary-item"><span class="icon">👥</span> Team Size: 1</li>
-                <li class="project-summary-item"><span class="icon">🕒</span> Time frame: 3 months</li>
-                <li class="project-summary-item"><span class="icon">🛠</span> Engine: Unreal Engine (C++)</li>
-              </ul>
-            </section>
-          </div>
-      
-        <div class = "header"> 
-          <h2> Introduction </h2>
-        </div>
-        <p class="project-description">
-          The project was a top down survival game where the player had to survive against waves of enemies. The player could move around the map and shoot at the enemies to survive. The game was developed using Unreal Engine and C++ programming language. The project was a great learning experience for me as it allowed me to apply the programming concepts I had learned in class to a real project. I also learned how to use Unreal Engine and its various features to create a game. Overall, it was a great project that helped me develop my skills as a game developer.
+      <section class="project-hero" aria-labelledby="project-title">
+        <p class="eyebrow">Solo project | Unreal Engine C++</p>
+        <h1 id="project-title">Cowboy Survival</h1>
+        <p class="project-lead">
+          A top-down wave survival game focused on movement, shooting, enemy behaviour, and game-state systems.
         </p>
-      <div class = "header"> 
-        <h2> What I Had Learned </h2>
-      </div>
-      <p class="project-description">
-        Through this project, I learned the fundamentals of C++ programming within the context of game development. I gained experience in creating gameplay mechanics, implementing AI behavior, and managing game states. Additionally, I improved my problem-solving skills and learned how to debug and optimize code in Unreal Engine.
-      </p>
+      </section>
 
-  <footer>
-  <div>
-  <p>&copy; 2026 Brandon Clough. All rights reserved.</p>
-  </div>
-  </footer>
+      <section class="video-panel" aria-label="Cowboy Survival gameplay video">
+        <video src="media/CowboySurvivalGameplay.mp4" autoplay loop muted playsinline controls preload="metadata"></video>
+      </section>
 
-</body>
- 
+      <section class="project-summary-grid" aria-label="Project summary">
+        <article class="project-summary-card">
+          <h2>About</h2>
+          <p>
+            Cowboy Survival was a solo first-year university project that helped me apply C++ programming concepts inside Unreal Engine.
+          </p>
+        </article>
 
+        <article class="project-summary-card">
+          <h2>Project Info</h2>
+          <dl class="project-facts">
+            <div><dt>Role</dt><dd>Gameplay Programmer</dd></div>
+            <div><dt>Team Size</dt><dd>1</dd></div>
+            <div><dt>Time Frame</dt><dd>3 months</dd></div>
+            <div><dt>Engine</dt><dd>Unreal Engine C++</dd></div>
+          </dl>
+        </article>
+      </section>
+
+      <section class="text-section" aria-labelledby="intro-heading">
+        <h2 id="intro-heading">Introduction</h2>
+        <p>
+          The project was a top-down survival game where the player had to survive against waves of enemies. The player could move around the map and shoot enemies to stay alive. It was a useful project for turning classroom programming concepts into a playable Unreal Engine prototype.
+        </p>
+      </section>
+
+      <section class="text-section" aria-labelledby="learning-heading">
+        <h2 id="learning-heading">What I Learned</h2>
+        <p>
+          I learned the fundamentals of C++ programming in a game development context. I gained experience creating gameplay mechanics, implementing AI behaviour, managing game states, debugging code, and improving systems inside Unreal Engine.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Brandon Clough. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
